@@ -1,0 +1,29 @@
+{
+    "name": "auto-input",
+    "version": "0.1",
+    "description": "自动输入 input 值",
+    "icons": {
+        "16": "chrome.png",
+        "32": "chrome.png",
+        "48": "chrome.png",
+        "128": "chrome.png"
+    },
+    "browser_action": {
+        "default_icon": "chrome.png",
+        "default_popup": "popup.html"
+    },
+    "commands": {
+        "toggle-tags": {
+            "suggested_key": {
+                "default": "Alt+S",
+                "mac": "MacCtrl+S"
+            },
+            "description": "Toggle Tags"
+        }
+    },
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": ["*://*/*","tabs"]
+  }
