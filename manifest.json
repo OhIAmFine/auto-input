@@ -12,6 +12,13 @@
         "default_icon": "chrome.png",
         "default_popup": "popup.html"
     },
+    "manifest_version": 2,
+    "permissions": ["*://*/*","activeTab"],
+    "content_scripts" : [{
+        "matches" : ["*://*/*"],
+        "js" : ["content.js"],
+        "run_at" : "document_end"
+    }],
     "commands": {
         "toggle-tags": {
             "suggested_key": {
@@ -20,10 +27,5 @@
             },
             "description": "Toggle Tags"
         }
-    },
-    "manifest_version": 2,
-    "background": {
-        "scripts": ["background.js"]
-    },
-    "permissions": ["*://*/*","tabs"]
+    }
   }
